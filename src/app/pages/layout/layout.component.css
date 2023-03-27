@@ -1,0 +1,19 @@
+.container {
+    height: 100%;
+}
+
+.content {
+    padding: 30px;
+}
+
+mat-toolbar {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+mat-card {
+    padding: 30px;
+    height: 93%;
+}
