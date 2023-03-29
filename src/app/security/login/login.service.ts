@@ -40,7 +40,7 @@ export class LoginService {
     return localStorage.getItem(environment.token)
   }
 
-  private removerTokenLocalStorage(): void {
+  public removerTokenLocalStorage(): void {
     localStorage.removeItem(environment.token);
     
 

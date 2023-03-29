@@ -2,20 +2,18 @@
     <mat-drawer mode="side" opened>
         <mat-toolbar color="primary">
             <mat-nav-list class="nav-list">
-                <mat-list-item>Inicio</mat-list-item>
+                <mat-list-item routerLink="/dashboard">Inicio</mat-list-item>
                 <mat-list-item>Usuários</mat-list-item>
-                <mat-list-item>Investimentos</mat-list-item>
+                <mat-list-item routerLink="/dashboard/clients">Clientes</mat-list-item>
                 <mat-list-item>Vendas</mat-list-item>
                 <mat-list-item>Configurações</mat-list-item>
-                <mat-list-item routerLink="/">Sair</mat-list-item>
+                <mat-list-item (click)="logout()">Sair</mat-list-item>
             </mat-nav-list>
         </mat-toolbar>
     </mat-drawer>
 
     <mat-drawer-content class="content">
-        <mat-card>
-            <router-outlet></router-outlet>
-        </mat-card>
-
+        <router-outlet></router-outlet>
     </mat-drawer-content>
+
 </mat-drawer-container>
