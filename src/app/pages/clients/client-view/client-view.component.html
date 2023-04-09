@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="title">
+        <h2>Dados do Cliente</h2>
+        <button mat-icon-button matTooltip="Voltar" (click)="cancel()"><i class="material-icons">arrow_back</i></button>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="main">
+        <div class="id">
+            <p mat-icon-button>
+                <i class="material-icons" matTooltip="Identificador">fingerprint</i>
+            </p>
+
+            <h3> {{client.id }}</h3>
+        </div>
+        <div class="name">
+            <p mat-icon-button>
+                <i class="material-icons" matTooltip="Nome">person</i>
+
+            </p>
+            <h3> {{client.name }}</h3>
+        </div>
+
+        <div class="email">
+            <p mat-icon-button>
+                <i class="material-icons" matTooltip="E-mail">email</i>
+            </p>
+            <h3>{{client.email }}</h3>
+        </div>
+
+        <div class="date">
+            <p mat-icon-button>
+                <i class="material-icons" matTooltip="Cliente Desde">calendar_month</i>
+            </p>
+            <h3>{{client.createdAt | date : 'dd/MM/yyyy'}}</h3>
+        </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <app-investments-list-by-client *ngIf="client !== null" [client]="client"></app-investments-list-by-client>
+
+</div>

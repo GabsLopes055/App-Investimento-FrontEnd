@@ -2,12 +2,15 @@
     <mat-drawer mode="side" opened>
         <mat-toolbar color="primary">
             <mat-nav-list class="nav-list">
-                <mat-list-item routerLink="/dashboard">Inicio</mat-list-item>
-                <mat-list-item>Usuários</mat-list-item>
-                <mat-list-item routerLink="/dashboard/clients">Clientes</mat-list-item>
-                <mat-list-item>Vendas</mat-list-item>
-                <mat-list-item>Configurações</mat-list-item>
-                <mat-list-item (click)="logout()">Sair</mat-list-item>
+                <div class="img">
+                    <img src="../../../assets/img/undraw_pic_profile_re_7g2h.svg" alt="logo-usuario">
+                </div>
+                <mat-list-item routerLink="/dashboard"><a>Inicio</a></mat-list-item>
+                <mat-list-item><a>Usuários</a></mat-list-item>
+                <mat-list-item routerLink="/dashboard/clients"><a>Clientes</a></mat-list-item>
+                <mat-list-item><a>Investimentos</a></mat-list-item>
+                <mat-list-item><a>Configurações</a></mat-list-item>
+                <mat-list-item (click)="logout()"><a>Sair</a></mat-list-item>
             </mat-nav-list>
         </mat-toolbar>
     </mat-drawer>

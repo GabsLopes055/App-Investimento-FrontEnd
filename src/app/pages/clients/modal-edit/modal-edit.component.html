@@ -1,0 +1,33 @@
+<div class="content">
+    <h2 mat-dialog-title>Editar Cliente</h2>
+    <mat-divider></mat-divider>
+    <mat-dialog-content>
+
+        <form class="form-input" [formGroup]="formClient">
+            <!-- <mat-form-field appearance="outline">
+                <mat-label>ID</mat-label>
+                <input matInput type="text" autocomplete="off" placeholder="Example" formControlName="id" readonly>
+            </mat-form-field> -->
+            <mat-form-field appearance="outline">
+                <mat-label>Nome</mat-label>
+                <input matInput type="text" autocomplete="off" placeholder="Example" formControlName="name">
+            </mat-form-field>
+            <mat-error *ngIf="isFormControlInvalid('name')">
+                Nome é <strong>obrigatório</strong>
+            </mat-error>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" autocomplete="off" placeholder="example@xyz.com" formControlName="email">
+            </mat-form-field>
+            <mat-error *ngIf="isFormControlInvalid('email')">
+                Email é <strong>obrigatório</strong>
+            </mat-error>
+            <mat-divider></mat-divider>
+            <mat-dialog-actions align="end">
+                <button mat-stroked-button mat-dialog-close>Cancelar</button>
+                <button name="submit" mat-raised-button mat-dialog-close="true" color="accent" (click)="editClient()">Editar</button>
+            </mat-dialog-actions>
+        </form>
+
+    </mat-dialog-content>
+</div>

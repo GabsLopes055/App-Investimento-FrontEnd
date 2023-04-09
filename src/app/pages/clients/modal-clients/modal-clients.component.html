@@ -1,20 +1,31 @@
-<h2 mat-dialog-title>Cadastrar Clientes</h2>
-<mat-divider></mat-divider>
-<mat-dialog-content>
-    <form>
-        <mat-form-field appearance="fill">
-            <mat-label>Nome</mat-label>
-            <input matInput type="text" autocomplete="off" placeholder="Example" formControlName="name">
-        </mat-form-field>
+<div class="content">
+    <h2 mat-dialog-title>Cadastrar Clientes</h2>
 
-        <mat-form-field appearance="fill">
-            <mat-label>Email</mat-label>
-            <input matInput type="email" autocomplete="off" placeholder="example@xyz.com" formControlName="email">
-        </mat-form-field>
-    </form>
-</mat-dialog-content>
-<mat-divider></mat-divider>
-<mat-dialog-actions align="end">
-    <button mat-stroked-button mat-dialog-close color="">Cancelar</button>
-    <button mat-raised-button color="primary">Cadastrar</button>
-</mat-dialog-actions>
+    <mat-divider></mat-divider>
+
+    <mat-dialog-content>
+        <form class="form-input" [formGroup]="formCliente">
+            <mat-form-field appearance="outline">
+                <mat-label>Nome</mat-label>
+                <input matInput type="text" autocomplete="off" placeholder="Example" formControlName="name">
+                <mat-error *ngIf="isFormControlInvalid('name')">
+                    Nome é <strong>obrigatório</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" autocomplete="off" placeholder="example@xyz.com" formControlName="email">
+                <mat-error *ngIf="isFormControlInvalid('email')">
+                    Email é <strong>obrigatório</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-divider></mat-divider>
+            <mat-dialog-actions align="end">
+                <button mat-stroked-button mat-dialog-close>Cancelar</button>
+                <button name="submit" mat-raised-button mat-dialog-close="true" color="primary" (click)="saveNewClient()" [disabled]="!formCliente.valid">Cadastrar</button>
+            </mat-dialog-actions>
+        </form>
+    </mat-dialog-content>
+
+</div>

@@ -4,6 +4,7 @@
 
 .content {
     padding: 30px;
+    padding-bottom: 40px;
 }
 
 mat-toolbar {
@@ -16,4 +17,17 @@ mat-toolbar {
 mat-card {
     padding: 30px;
     height: 93%;
+}
+
+mat-nav-list mat-list-item a {
+    color: #fff;
+}
+
+.img {
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
 }

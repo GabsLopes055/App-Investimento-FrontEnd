@@ -1,0 +1,13 @@
+<div class="content">
+    <h2 mat-dialog-title>Excluir Cliente</h2>
+    <mat-divider></mat-divider>
+    <mat-dialog-content>
+
+        <p><strong>Deseja excluir o Cliente:</strong> {{this.data.name}} ?</p>
+        <mat-divider></mat-divider>
+        <mat-dialog-actions align="end">
+            <button mat-stroked-button mat-dialog-close>Cancelar</button>
+            <button name="submit" mat-raised-button mat-dialog-close="true" color="warn" (click)="removeclient()">Excluir</button>
+        </mat-dialog-actions>
+    </mat-dialog-content>
+</div>

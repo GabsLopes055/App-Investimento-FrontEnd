@@ -13,7 +13,7 @@ export class LayoutComponent {
 
   public logout(){
     this.loginService.removerTokenLocalStorage();
-    this.router.navigate(['/']);
+    this.router.navigate(['/login']);
   }
 
 

@@ -11,12 +11,22 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDividerModule } from '@angular/material/divider';
 import { ModalClientsComponent } from './modal-clients/modal-clients.component';
 import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalEditComponent } from './modal-edit/modal-edit.component';
+import { ModalRemoveComponent } from './modal-remove/modal-remove.component';
+import { ClientViewComponent } from './client-view/client-view.component';
+import { MatCardModule } from '@angular/material/card';
+import { InvestmentsModule } from '../investments/investments.module';
 
 
 @NgModule({
   declarations: [
     ClientListComponent,
-    ModalClientsComponent
+    ModalClientsComponent,
+    ModalEditComponent,
+    ModalRemoveComponent,
+    ClientViewComponent,
+
   ],
   imports: [
     CommonModule,
@@ -27,10 +37,15 @@ import { MatInputModule } from '@angular/material/input';
     MatDialogModule,
     MatTooltipModule,
     MatDividerModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    InvestmentsModule
   ],
   providers: [
-    ModalClientsComponent
+    ModalClientsComponent,
+    ModalEditComponent
   ]
 })
 export class ClientsModule { }

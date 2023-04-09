@@ -14,7 +14,8 @@ const routes: Routes = [
     canActivate:[AuthGuard],
     children: [
       { path: '', component: HomeComponent },
-      { path: 'clients', loadChildren: () => import('./pages/clients/clients.module').then(m => m.ClientsModule) }
+      { path: 'clients', loadChildren: () => import('./pages/clients/clients.module').then(m => m.ClientsModule) },
+      
     ]
   },
   { path: '**', redirectTo: "" }
