@@ -1,0 +1,30 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .cards {
+    width: 100%;
+    height: 100%;
+    margin: 30px 10px 30px;
+}
+
+.cardUm mat-card {
+    border-left: 4px #3f51b5 solid;
+    /* border-radius: %; */
+}
+
+.cardDois mat-card {
+    border-left: #673ab7 solid;
+    border-radius: 1%;
+}
+
+.cardTres mat-card {
+    border-left: #e91e63 solid;
+    border-radius: 1px;
+}
+
+.cardQuatro mat-card {
+    border-left: #111213 solid;
+    border-radius: 1px;
+}

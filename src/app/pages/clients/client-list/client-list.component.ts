@@ -18,7 +18,7 @@ export class ClientListComponent {
 
 
   indices: string[] = ['id', 'nome', 'email', 'createdAt', 'investimentos', 'editar', 'remover'];
-  dataSource = this.showListClients();
+  // dataSource = this.showListClients();
 
   constructor(
     private clientsService: ClientsService,

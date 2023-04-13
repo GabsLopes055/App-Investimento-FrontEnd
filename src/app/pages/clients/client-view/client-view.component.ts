@@ -24,6 +24,7 @@ export class ClientViewComponent {
     this.clientsService.findById(id).subscribe((Client) => {
       this.client = Client
       console.log(this.client)
+      console.log(typeof(this.client))
     })
   }
 

@@ -5,3 +5,32 @@
     text-align: center;
     margin-top: 20px;
 }
+
+mat-table {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+th,
+td {
+    text-align: center;
+}
+
+.title {
+    display: flex;
+}
+
+.title button {
+    margin-left: 30px;
+    margin-top: -8px;
+    /* float: left; */
+}
+
+mat-divider {
+    margin: 0 0 15px 0;
+}
+
+.table {
+    margin-bottom: 60px;
+}

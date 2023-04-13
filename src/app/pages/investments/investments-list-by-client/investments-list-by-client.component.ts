@@ -1,6 +1,8 @@
+import { Investment } from './../shared/investments.model';
 import { Client } from './../../clients/shared/client.model';
 import { ActivatedRoute } from '@angular/router';
 import { Component, Input } from '@angular/core';
+import { investmentsService } from '../shared/investments.service';
 
 
 @Component({
@@ -13,14 +15,29 @@ export class InvestmentsListByClientComponent {
 
   @Input() client!: Client
 
-  constructor() {
+  public investments: Investment[] = [];
 
-  }
+  constructor(private investmentService: investmentsService) { }
+
+  indices: string[] = ['id', 'name', 'amount', 'clientId', 'indicadorCarencia', 'stocks', 'createdAt']
+
+  // 
+
+  // dataSource = this.findInvestmentClientById()
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    // const clientId = Number(this.activedRoute.snapshot.paramMap.get(id))
+   
+   this.investmentService.listInvestmentsByClientId(this.client.id as number).subscribe(Investment =>
+    this.investments = Investment)
+      
   }
+
+  public findInvestmentsClient() {
+     
+      
+  }
+
 
 }

@@ -31,7 +31,10 @@ export class ClientsService {
 
   public listAll(): Observable<Client[]> {
     const url = `${environment.baseUrlBackend}/clients`;
-    return this.httpClient.get<Client[]>(url);
+    return this.httpClient.get<Client[]>(url).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler('Não foi possível listar usuários'))
+    );
   }
 
   public findById(id: number): Observable<Client> {
