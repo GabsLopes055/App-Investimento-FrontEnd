@@ -20,8 +20,8 @@ export class LoginComponent {
 
   public criarFormulario(): FormGroup {
     return this.fb.group({
-      username: ["", [Validators.required, Validators.minLength(6)]],
-      password: ["", [Validators.required, Validators.minLength(6)]]
+      username: ["administrator", [Validators.required, Validators.minLength(6)]],
+      password: ["123456", [Validators.required, Validators.minLength(6)]]
     })
   }
 
